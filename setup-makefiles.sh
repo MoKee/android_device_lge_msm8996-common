@@ -27,9 +27,9 @@ export G6_DEVICE_LIST="g6"
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+MK_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
+HELPER="$MK_ROOT"/vendor/mk/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -37,7 +37,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper for common platform
-setup_vendor "$PLATFORM_COMMON" "$VENDOR" "$CM_ROOT" true
+setup_vendor "$PLATFORM_COMMON" "$VENDOR" "$MK_ROOT" true
 
 # Copyright headers and common guards
 write_headers "$G5_DEVICE_LIST $V20_DEVICE_LIST"
@@ -76,7 +76,7 @@ echo "endif" >> "$ANDROIDMK"
 write_footers
 
 # Reinitialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$MK_ROOT" true
 
 # Copyright headers and guards
 if [ "$DEVICE_COMMON" == "g5-common" ]; then
@@ -95,7 +95,7 @@ write_makefiles "$MY_DIR"/../$DEVICE_COMMON/proprietary-files.txt
 write_footers
 
 # Reinitialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT"
 
 # Copyright headers and guards
 write_headers
