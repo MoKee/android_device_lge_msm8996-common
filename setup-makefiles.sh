@@ -20,7 +20,7 @@ set -e
 
 export INITIAL_COPYRIGHT_YEAR=2016
 export G5_DEVICE_LIST="g5 h830 h850"
-export V20_DEVICE_LIST="v20 h910 h918 us996"
+export V20_DEVICE_LIST="v20 h910 h918 us996 ls997 vs995"
 export G6_DEVICE_LIST="g6"
 
 # Load extract_utils and do some sanity checks
@@ -71,8 +71,6 @@ write_makefiles "$MY_DIR"/proprietary-files-qc-perf.txt
 
 echo "endif" >> "$PRODUCTMK"
 echo "endif" >> "$ANDROIDMK"
-
-printf '\n%s\n' "\$(call inherit-product, vendor/qcom/binaries/msm8996/graphics/graphics-vendor.mk)" >> "$PRODUCTMK"
 
 # We are done with platform
 write_footers
