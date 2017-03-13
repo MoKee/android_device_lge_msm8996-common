@@ -98,10 +98,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    hwaddrs
-
 # Browser
 PRODUCT_PACKAGES += \
     Gello
@@ -125,7 +121,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.usb.rc \
     init.target.rc \
-    set_baseband.sh \
     ueventd.qcom.rc
 
 # Display
