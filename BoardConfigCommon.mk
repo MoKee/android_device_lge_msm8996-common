@@ -104,6 +104,11 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 # CNE and DPM
 BOARD_USES_QCNE := true
 
+# CPU
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
+TARGET_USES_INTERACTION_BOOST := true
+
 # Display
 BOARD_USES_ADRENO := true
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
@@ -154,7 +159,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_NEEDS_PDFIUM_BIGINT := true
 
 # Power
-TARGET_POWERHAL_VARIANT := qcom
+BOARD_HAL_STATIC_LIBRARIES := libdumpstate.msm8996
 
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
