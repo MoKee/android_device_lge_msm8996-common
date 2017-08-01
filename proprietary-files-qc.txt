@@ -105,6 +105,8 @@ vendor/lib64/libdpmtcm.so
 # DRM
 bin/qseecomd
 vendor/bin/qseeproxydaemon
+vendor/lib/libcppf.so
+vendor/lib/liboemcrypto.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libStDrvInt.so
 vendor/lib/libqisl.so
@@ -200,6 +202,7 @@ vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsd_sdk_display.so
 -vendor/lib/libsdm-disp-apis.so
+vendor/lib/libtinyxml2_1.so
 vendor/lib64/hw/vulkan.msm8996.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
@@ -230,6 +233,7 @@ vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 -vendor/lib64/libsdm-disp-apis.so
 vendor/lib64/libsdmextension.so
+vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libuiblur.so
 
 # Keystore
@@ -246,6 +250,7 @@ lib/libOmxVpp.so
 lib/libvpplibrary.so
 lib64/libOmxVpp.so
 lib64/libvpplibrary.so
+-vendor/lib/libgpustats.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
@@ -262,6 +267,7 @@ vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
+-vendor/lib64/libgpustats.so
 vendor/lib64/libI420colorconvert.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib64/libOmxAlacDec.so
