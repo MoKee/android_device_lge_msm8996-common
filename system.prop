@@ -1,6 +1,9 @@
 #
-# System Properties for LG G5
+# System Properties for LG MSM8996
 #
+
+# Art
+ro.sys.fw.dex2oat_thread_count=4
 
 # Audio
 ro.qc.sdk.audio.ssr=false
@@ -38,7 +41,7 @@ persist.spkr.cal.duration=5
 
 # Bluetooth
 persist.bt.enableAptXHD=true
-ro.bt.bdaddr_path="/data/misc/bdaddr"
+ro.bt.bdaddr_path="/data/misc/bluetooth/bdaddr"
 
 # Camera
 ro.camera.notify_nfc=1

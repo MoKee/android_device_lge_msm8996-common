@@ -14,9 +14,10 @@
 # limitations under the License.
 #
 
-BOARD_VENDOR := lge
-
 COMMON_PATH := device/lge/msm8996-common
+
+# inherit from common lge
+-include device/lge/common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
@@ -85,7 +86,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/libbt_vndcfg.txt
+BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 
 # Offmode Charging
